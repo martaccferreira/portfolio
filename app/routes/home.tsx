@@ -1,17 +1,29 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { MeanGirlsHero } from "../welcome/mean-girls-hero";
+import { ThemeNames } from "../themes";
+import { useContext } from "react";
+import { ThemeNameContext } from "~/theme-wrapper";
+import { ScreamHero } from "~/welcome/scream-hero";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Marta Ferreira" },
+    { name: "description", content: "Welcome to my portfolio!" },
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_NETLIFY };
-}
+const Hero = {
+  [ThemeNames.MeanGirls]: <MeanGirlsHero />,
+  [ThemeNames.Scream]: <ScreamHero />,
+};
 
-export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+export default function Home() {
+  const { themeName } = useContext(ThemeNameContext);
+
+  return (
+    <>
+      {Hero[themeName]}
+      <p>Next Component</p>
+    </>
+  );
 }
