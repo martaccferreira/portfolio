@@ -38,13 +38,16 @@ export const screamThemeOptions: ThemeOptions = {
     h1: {
       fontFamily: "Bebas Neue, sans-serif",
       fontWeight: 400,
-      fontSize: "3.2rem",
+      fontSize: "4rem",
       letterSpacing: "0.05em",
     },
     h2: {
       fontFamily: "Bebas Neue, sans-serif",
       fontWeight: 400,
-      fontSize: "2.5rem",
+      fontSize: "3.5rem",
+    },
+    h3: {
+      fontWeight: 300,
     },
     body1: {
       fontWeight: 400,
@@ -86,16 +89,18 @@ export const meanGirlsThemeOptions: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "League Spartan, sans-serif",
     h1: {
-      fontFamily: "Pacifico, cursive",
       fontWeight: 400,
-      fontSize: "3rem",
+      textTransform: "uppercase",
+      fontSize: "4rem",
     },
     h2: {
-      fontFamily: "Pacifico, cursive",
-      fontWeight: 400,
-      fontSize: "2.5rem",
+      fontWeight: 600,
+      fontSize: "3.5rem",
+    },
+    h3: {
+      fontWeight: 300,
     },
     body1: {
       fontWeight: 300,

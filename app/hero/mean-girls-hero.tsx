@@ -1,4 +1,11 @@
-import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import DevBook from "../../assets/mean-girls/mean-girls-hero.png";
 import DevBookTop from "../../assets/mean-girls/hero-detail-top.png";
 import DevBookBottom from "../../assets/mean-girls/hero-detail-bottom.png";
@@ -78,6 +85,7 @@ export function MeanGirlsHero() {
           </Grid>
         )}
       </Grid>
+      <Divider sx={{ borderBottomWidth: 5 }} />
     </Box>
   );
 }
