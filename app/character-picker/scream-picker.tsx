@@ -8,18 +8,21 @@ const cards = [
     title: "The (Not So) Goody Two Shoes",
     description: "Sydney Prescott",
     media: "cady.jpg",
+    emojis: ["🌂", "👩🏻", "🚨"],
   },
   {
     id: ScreamCharacters.Ghostface,
     title: "The Killer(s)",
     description: "???",
     media: "regina.jpg",
+    emojis: ["🔪", "👻", "🩸"],
   },
   {
     id: ScreamCharacters.Casey,
     title: "The Blond Airhead(?)",
     description: "Casey Becker",
     media: "janis.jpg",
+    emojis: ["📞", "👱🏻‍♀️", "📺"],
   },
 ];
 

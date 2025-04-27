@@ -8,18 +8,21 @@ const cards = [
     title: "The Transfer Student",
     description: "Cady Heron",
     media: "cady.jpg",
+    emojis: ["🦒", "🌳", "📚"],
   },
   {
     id: MeanGirlsCharacters.Regina,
     title: "The Queen Bee",
     description: "Regina George",
     media: "regina.jpg",
+    emojis: ["👑", "💄", "💋"],
   },
   {
     id: MeanGirlsCharacters.Janis,
     title: "The Outcast",
     description: "Janis Ian",
     media: "janis.jpg",
+    emojis: ["🖤", "🎸", "😈"],
   },
 ];
 
