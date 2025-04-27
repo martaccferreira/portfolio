@@ -8,7 +8,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import { ThemeWrapper } from "./theme-wrapper";
+import { ThemeWrapper } from "./theme/theme-wrapper";
 import { FloatingButtons } from "./components/floating-buttons";
 
 // TODO: search new typography

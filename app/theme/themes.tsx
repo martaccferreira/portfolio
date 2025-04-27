@@ -1,10 +1,5 @@
 import type { ThemeOptions } from "@mui/material";
 
-export enum ThemeNames {
-  MeanGirls = "mean-girls",
-  Scream = "scream",
-}
-
 export const screamThemeOptions: ThemeOptions = {
   palette: {
     mode: "dark",

@@ -5,10 +5,10 @@ import {
   type TooltipProps,
   tooltipClasses,
 } from "@mui/material";
-import { ThemeNames } from "~/themes";
+import { ThemeNames } from "~/theme/types";
 import { MeanGirlsIcon } from "./mean-girls-icon";
 import { ScreamIcon } from "./scream-icon";
-import { ThemeNameContext } from "~/theme-wrapper";
+import { ThemeContext } from "~/theme/theme-wrapper";
 import { useContext } from "react";
 
 const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -20,7 +20,7 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
 }));
 
 export function ThemeSwitcher() {
-  const { themeName, setThemeName } = useContext(ThemeNameContext);
+  const { themeName, setThemeName } = useContext(ThemeContext);
   return (
     <>
       <LightTooltip title="Mean Girls" placement="left">
