@@ -13,7 +13,6 @@ export function MeanGirlsAbout() {
           "It's no fun to read gossip, if you don't know who it's about, right?",
         ]}
         align="left"
-        avatarUrl=""
       />
       <Box sx={{ padding: 16 }} aria-hidden="true" />
       <Typography
@@ -46,7 +45,6 @@ export function MeanGirlsAbout() {
           "Moving on.",
         ]}
         align="right"
-        avatarUrl=""
       />
     </>
   );

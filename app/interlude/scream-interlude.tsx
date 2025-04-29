@@ -34,7 +34,7 @@ export function ScreamInterlude() {
       <Typography variant="h2" align="center">
         "{Movies} make {Psychos} more creative."
       </Typography>
-      <Box sx={{ height: "30vh", backgroundColor: "transparent" }} />
+      <Box sx={{ height: "50vh", backgroundColor: "transparent" }} />
     </ScrollSyncedVideo>
   );
 }

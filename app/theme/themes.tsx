@@ -94,8 +94,9 @@ export const meanGirlsThemeOptions: ThemeOptions = {
       fontSize: "4rem",
     },
     h2: {
-      fontWeight: 600,
-      fontSize: "3.5rem",
+      fontWeight: 400,
+      textTransform: "uppercase",
+      fontSize: "3rem",
     },
     h3: {
       fontWeight: 300,

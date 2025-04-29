@@ -6,14 +6,12 @@ import { useInView } from "react-intersection-observer";
 
 interface ChatBubbleProps {
   messages: string[];
-  avatarUrl: string;
   align: "left" | "right";
   size?: "normal" | "large";
 }
 
 export default function ChatBubble({
   messages,
-  avatarUrl,
   align,
   size = "large",
 }: ChatBubbleProps) {
@@ -49,11 +47,11 @@ export default function ChatBubble({
         alignItems: "flex-end",
         gap: 2.5,
         mb: 4,
-        width: "100%",
+        maxWidth: "100%",
       }}
     >
       <Avatar
-        src={avatarUrl}
+        src={"avatarUrl"}
         alt={characterName}
         sx={{ width: avatarSize, height: avatarSize }}
       />
@@ -63,7 +61,8 @@ export default function ChatBubble({
           display: "flex",
           flexDirection: "column",
           alignItems: isLeft ? "flex-start" : "flex-end",
-          width: "100%",
+          maxWidth: "100%",
+
           gap: 1.5 * shrinkFactor,
         }}
       >
@@ -90,7 +89,7 @@ export default function ChatBubble({
                 sx={{
                   px: 3 * shrinkFactor,
                   py: 2 * shrinkFactor,
-                  maxWidth: "70%",
+                  maxWidth: "100%",
                   backgroundColor: "primary.main",
                   borderRadius: 3,
                   borderBottomLeftRadius: isLeft && isLast ? 0 : "12px",

@@ -131,9 +131,6 @@ export default function ScrollSyncedVideo({
           />
         </Box>
       </Box>
-
-      {/* Space after to allow unstick */}
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
     </Box>
   );
 }
