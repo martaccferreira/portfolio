@@ -23,15 +23,8 @@ export function ScreamWelcome() {
         so far.
       </Typography>
       <Box sx={{ pt: 2 }} />
-      <Typography variant="h3" color="primary.contrastText">
-        But “{" "}
-        <Box
-          component="span"
-          sx={{ fontFamily: "Bebas Neue", color: "secondary.main" }}
-        >
-          we all go a little mad sometimes{" "}
-        </Box>
-        ” like that.
+      <Typography variant="h3" color="secondary.main">
+        Do you think you can make it to the end?
       </Typography>
       <></>
     </Box>

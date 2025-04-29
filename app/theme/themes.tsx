@@ -85,6 +85,9 @@ export const meanGirlsThemeOptions: ThemeOptions = {
   },
   typography: {
     fontFamily: "League Spartan, sans-serif",
+    allVariants: {
+      color: "#fff0f6",
+    },
     h1: {
       fontWeight: 400,
       textTransform: "uppercase",

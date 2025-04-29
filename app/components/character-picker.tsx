@@ -100,12 +100,7 @@ export function CharacterPicker({ title, cards }: Props) {
                 alt={card.description}
               />
               <CardContent sx={{ height: "100%" }}>
-                <Typography
-                  variant="h5"
-                  component="div"
-                  align="center"
-                  color="primary.contrastText"
-                >
+                <Typography variant="h5" component="div" align="center">
                   {card.title}
                 </Typography>
                 <Typography

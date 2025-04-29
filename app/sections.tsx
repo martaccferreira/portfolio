@@ -1,7 +1,8 @@
 import { MeanGirlsWelcome, ScreamWelcome } from "./welcome";
-import { MeanGirlsInterlude } from "./interlude";
+import { MeanGirlsInterlude, ScreamInterlude } from "./interlude";
 import { MeanGirlsPicker, ScreamPicker } from "./character-picker";
 import { ThemeNames } from "./theme/types";
+import { MeanGirlsAbout, ScreamAbout } from "./about";
 
 export const sections = [
   {
@@ -14,7 +15,7 @@ export const sections = [
   {
     components: {
       [ThemeNames.MeanGirls]: <MeanGirlsInterlude />,
-      [ThemeNames.Scream]: <></>,
+      [ThemeNames.Scream]: <ScreamInterlude />,
     },
     includeSpacing: true,
   },
@@ -24,5 +25,12 @@ export const sections = [
       [ThemeNames.Scream]: <ScreamPicker />,
     },
     includeSpacing: false,
+  },
+  {
+    components: {
+      [ThemeNames.MeanGirls]: <MeanGirlsAbout />,
+      [ThemeNames.Scream]: <ScreamAbout />,
+    },
+    includeSpacing: true,
   },
 ] as const;

@@ -46,12 +46,12 @@ const resources = [
 
 export function MeanGirlsWelcome() {
   return (
-    <Box sx={{ padding: "40px" }} color="primary.contrastText">
+    <Box sx={{ padding: "40px" }}>
       <Typography variant="h3">
         Don't worry, we don't actually trash anyone here.
       </Typography>
       <Box sx={{ pt: 2 }} />
-      <Typography variant="h1" color="primary.contrastText">
+      <Typography variant="h1">
         Well… maybe we <i>do</i> roast a little of{" "}
         <Box component="span" sx={{ color: "secondary.main" }}>
           Marta
@@ -70,9 +70,7 @@ export function MeanGirlsWelcome() {
         so far.
       </Typography>
       <Box sx={{ pt: 2 }} />
-      <Typography variant="h3" color="primary.contrastText">
-        But who cares, right?
-      </Typography>
+      <Typography variant="h3">But who cares, right?</Typography>
       <></>
     </Box>
   );

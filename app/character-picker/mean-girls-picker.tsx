@@ -28,12 +28,7 @@ const cards = [
 
 export function MeanGirlsPicker() {
   const title = (
-    <Typography
-      variant="h1"
-      align="center"
-      sx={{ fontSize: "2.5rem", p: 2 }}
-      color="primary.contrastText"
-    >
+    <Typography variant="h1" align="center" sx={{ fontSize: "2.5rem", p: 2 }}>
       Pick your{" "}
       <Box component="span" sx={{ color: "primary.main" }}>
         <Box component="span" sx={{ fontWeight: 800 }}>

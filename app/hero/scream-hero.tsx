@@ -1,5 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import ScreamHeroImage from "../../assets/scream/scream-hero.jpg";
+import { OverlapTitle } from "~/components/overlap-title";
 
 export function ScreamHero() {
   const isSmallScreen = useMediaQuery("(max-width:865px)");
@@ -34,30 +35,11 @@ export function ScreamHero() {
             }}
           >
             "Do you like{" "}
-            <Box
-              position="relative"
-              display="inline-block"
-              sx={{
-                mx: isSmallScreen ? 1 : 2,
-                whiteSpace: "nowrap",
-              }}
-            >
-              <Box component="span" sx={{ opacity: 1, position: "relative" }}>
-                portfolio websites
-              </Box>
-              <Box
-                component="span"
-                sx={{
-                  position: "absolute",
-                  left: isSmallScreen ? -10 : -16,
-                  top: isSmallScreen ? -20 : -35,
-                  opacity: 0.5,
-                  fontSize: isSmallScreen ? "3.5rem" : "5rem",
-                }}
-              >
-                scary movies
-              </Box>
-            </Box>
+            <OverlapTitle
+              mainTitle="portfolio websites"
+              fadedTitle="scary movies"
+              isSmallScreen={isSmallScreen}
+            />
             ?"
           </Typography>
         </Box>

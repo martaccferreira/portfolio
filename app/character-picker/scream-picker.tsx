@@ -28,12 +28,7 @@ const cards = [
 
 export function ScreamPicker() {
   const title = (
-    <Typography
-      variant="h1"
-      align="center"
-      sx={{ fontSize: "2.5rem", p: 3 }}
-      color="primary.contrastText"
-    >
+    <Typography variant="h1" align="center" sx={{ fontSize: "2.5rem", p: 3 }}>
       Pick your{" "}
       <Box component="span" sx={{ color: "primary.main" }}>
         slasher personality
@@ -44,8 +39,8 @@ export function ScreamPicker() {
 
   return (
     <>
-      <Typography variant="h4" align="center" color="secondary.main">
-        However, before that
+      <Typography variant="h5" align="center" color="secondary.main">
+        It's too dangerous to go alone,
       </Typography>
       <CharacterPicker title={title} cards={cards} />
     </>
