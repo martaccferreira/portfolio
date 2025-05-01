@@ -75,6 +75,7 @@ export function ProjectCarousel() {
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseUp}
       onMouseUp={onMouseUp}
+      sx={{ mb: 32 }}
     >
       <ScrollContainer ref={containerRef}>
         {projects.map((project, index) => (

@@ -1,10 +1,15 @@
 import { Typography, Box } from "@mui/material";
 import { ContactForm } from "~/components/contact-form";
 
-export function MeanGirlsContact() {
+export function MeanGirlsContact({
+  stopInterludeRef,
+}: {
+  stopInterludeRef: React.RefObject<HTMLElement | null>;
+}) {
   return (
     <>
-      <Box sx={{ pb: 20, pt: 20 }}>
+      <Box sx={{ pb: 20, pt: 56 }}>
+        <Box ref={stopInterludeRef} aria-hidden />
         <Typography variant="h3">
           I've heard she has{" "}
           <Box component="span" sx={{ fontStyle: "italic" }}>

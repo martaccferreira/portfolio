@@ -7,7 +7,7 @@ interface ThemeSettings {
 }
 
 export function usePersistentThemeSettings() {
-  const [settings, setSettings] = useState<ThemeSettings>(defaultThemeSettings);
+  const [settings, setSettings] = useState<ThemeSettings | null>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem("themeSettings");
@@ -19,11 +19,13 @@ export function usePersistentThemeSettings() {
         console.error("Failed to parse theme settings from localStorage:", err);
         setSettings(defaultThemeSettings);
       }
+    } else {
+      setSettings(defaultThemeSettings);
     }
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (settings) {
       localStorage.setItem("themeSettings", JSON.stringify(settings));
     }
   }, [settings]);

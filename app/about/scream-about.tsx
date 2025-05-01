@@ -13,8 +13,9 @@ export function ScreamAbout() {
           "If you're allowed to live...it depends on who you are, you see? So we should get to know our target first.",
         ]}
         align="left"
+        animate
       />
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
+      <Box sx={{ padding: 21 }} aria-hidden="true" />
       <Typography
         variant="h1"
         color="primary.main"
@@ -34,7 +35,7 @@ export function ScreamAbout() {
       <Box sx={{ padding: 2 }} aria-hidden="true" />
       <AboutGrid />
       <SkillCarousels />
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
+      <Box sx={{ padding: 21 }} aria-hidden="true" />
       <ChatBubble
         messages={[
           "Hm.",
@@ -42,6 +43,7 @@ export function ScreamAbout() {
           "If only she could actually run maybe she’d have a decent chance of surviving.",
         ]}
         align="right"
+        animate
       />
     </>
   );

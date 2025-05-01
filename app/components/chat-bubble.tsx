@@ -8,12 +8,14 @@ interface ChatBubbleProps {
   messages: string[];
   align: "left" | "right";
   size?: "normal" | "large";
+  animate?: boolean;
 }
 
 export default function ChatBubble({
   messages,
   align,
   size = "large",
+  animate = false,
 }: ChatBubbleProps) {
   const { characterName } = useContext(ThemeContext);
   const isLeft = align === "left";
@@ -23,7 +25,8 @@ export default function ChatBubble({
     threshold: 0.5,
   });
 
-  const [revealedCount, setRevealedCount] = useState(0);
+  const initiallyRevealed = animate ? 0 : messages.length;
+  const [revealedCount, setRevealedCount] = useState(initiallyRevealed);
 
   useEffect(() => {
     if (inView && revealedCount < messages.length) {
@@ -72,12 +75,17 @@ export default function ChatBubble({
 
         {messages.slice(0, revealedCount).map((message, index) => {
           const isLast = index === revealedCount - 1;
+          const Container = animate ? motion.div : "div";
+          console.log(animate);
+
           return (
-            <motion.div
+            <Container
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              {...(animate && {
+                initial: { opacity: 0, y: 20 },
+                animate: { opacity: 1, y: 0 },
+                transition: { duration: 0.4, delay: index * 0.1 },
+              })}
               style={{
                 width: "100%",
                 display: "flex",
@@ -98,7 +106,7 @@ export default function ChatBubble({
               >
                 <Typography variant={messageVariant}>{message}</Typography>
               </Paper>
-            </motion.div>
+            </Container>
           );
         })}
       </Box>

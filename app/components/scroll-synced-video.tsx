@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import type { PropsWithChildren } from "react";
 import { Box, LinearProgress, IconButton, Typography } from "@mui/material";
 import PauseIcon from "@mui/icons-material/Pause";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 
 type Props = {
   vidPath: string;
@@ -11,54 +12,40 @@ export default function ScrollSyncedVideo({
   vidPath,
   children,
 }: PropsWithChildren<Props>) {
-  const videoRef = useRef(null);
-  const triggerRef = useRef(null);
-  const [startScrollY, setStartScrollY] = useState(null);
-  const [playableHeight, setPlayableHeight] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
+
+  const [triggerOffsetY, setTriggerOffsetY] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const trigger = triggerRef.current;
-      const video = videoRef.current;
+  const { scrollY } = useScroll();
 
-      if (!trigger || !video) return;
+  useLayoutEffect(() => {
+    const trigger = triggerRef.current;
+    if (trigger) {
+      const top = trigger.getBoundingClientRect().top + window.scrollY;
+      setTriggerOffsetY(top);
+    }
+  }, []);
 
-      const triggerRect = trigger.getBoundingClientRect();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const video = videoRef.current;
+    if (!video || triggerOffsetY === null) return;
 
-      const isTriggerOutOfView = triggerRect.bottom <= 0;
+    const playableHeight = window.innerHeight * 2;
+    const delta = latest - triggerOffsetY;
+    const clamped = Math.min(Math.max(delta / playableHeight, 0), 1);
+    const duration = video.duration || 1;
 
-      if (isTriggerOutOfView && startScrollY === null) {
-        setStartScrollY(window.scrollY);
-        setPlayableHeight(window.innerHeight * 2);
-      }
-
-      if (startScrollY !== null) {
-        const delta = window.scrollY - startScrollY;
-        const progress = Math.min(Math.max(delta / playableHeight, 0), 1);
-        const duration = video.duration || 1;
-        video.currentTime = progress * duration;
-        setProgress(progress * 100);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [startScrollY, playableHeight]);
+    video.currentTime = clamped * duration;
+    setProgress(clamped * 100);
+  });
 
   return (
-    <Box
-      sx={{
-        minHeight: "275vh",
-        position: "relative",
-        width: "100%",
-      }}
-    >
-      {/* Trigger point for scroll-based video start */}
+    <Box sx={{ minHeight: "275vh", position: "relative", width: "100%" }}>
       <Box ref={triggerRef} sx={{ height: "auto", py: 1 }} />
       {children}
 
-      {/* Sticky boundary wrapper */}
       <Box
         sx={{
           position: "sticky",
@@ -67,7 +54,6 @@ export default function ScrollSyncedVideo({
           zIndex: 10,
         }}
       >
-        {/* Relative video container */}
         <Box
           sx={{
             position: "relative",

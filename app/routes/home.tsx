@@ -1,9 +1,8 @@
 import type { Route } from "./+types/home";
-import { sections } from "../sections";
-import { ThemeNames } from "../theme/types";
-import { Fragment, useContext } from "react";
+import { useSections } from "../sections";
+import { useContext } from "react";
 import { ThemeContext } from "~/theme/theme-wrapper";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,12 +13,14 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   const { themeName } = useContext(ThemeContext);
+  const sections = useSections();
 
-  return sections.map(({ id, components, container: Container }) => {
+  return sections.map((section: any) => {
+    const Container = section.container;
     return (
-      <Container key={id}>
-        {components[themeName]}
-        <Box sx={{ padding: 16 }} aria-hidden="true" />
+      <Container key={section.id}>
+        {section.components[themeName]}
+        <Box sx={{ padding: 14 }} aria-hidden="true" />
       </Container>
     );
   });

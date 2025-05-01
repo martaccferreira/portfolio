@@ -1,10 +1,15 @@
 import { Typography, Box } from "@mui/material";
 import { ContactForm } from "~/components/contact-form";
 
-export function ScreamContact() {
+export function ScreamContact({
+  stopInterludeRef,
+}: {
+  stopInterludeRef: React.RefObject<HTMLElement | null>;
+}) {
   return (
     <>
-      <Box sx={{ pb: 20, pt: 20 }}>
+      <Box sx={{ pb: 20, pt: 56 }}>
+        <Box ref={stopInterludeRef} aria-hidden />
         <Typography variant="h2">
           Congratulations on making it to the end…
         </Typography>

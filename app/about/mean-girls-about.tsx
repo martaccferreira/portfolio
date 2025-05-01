@@ -13,8 +13,9 @@ export function MeanGirlsAbout() {
           "It's no fun to read gossip, if you don't know who it's about, right?",
         ]}
         align="left"
+        animate
       />
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
+      <Box sx={{ padding: 21 }} aria-hidden="true" />
       <Typography
         variant="h1"
         color="primary.main"
@@ -37,7 +38,7 @@ export function MeanGirlsAbout() {
       <Box sx={{ padding: 2 }} aria-hidden="true" />
       <AboutGrid />
       <SkillCarousels />
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
+      <Box sx={{ padding: 21 }} aria-hidden="true" />
       <ChatBubble
         messages={[
           "Ugh",
@@ -45,6 +46,7 @@ export function MeanGirlsAbout() {
           "Moving on.",
         ]}
         align="right"
+        animate
       />
     </>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import {
@@ -35,7 +35,7 @@ export function ScreamWork() {
   }));
 
   return (
-    <Box ref={ref}>
+    <Box ref={ref} sx={{ position: "relative" }}>
       <Box
         ref={containerRef}
         sx={{ position: "relative", height: "200vh", overflow: "hidden" }}
@@ -101,7 +101,12 @@ export function ScreamWork() {
         )}
 
         {/* Static title shown after scroll */}
-        <Box sx={{ height: "163vh", backgroundColor: "transparent" }} />
+        <Box
+          sx={{
+            height: "163vh",
+            backgroundColor: "transparent",
+          }}
+        />
         <Box
           sx={{
             pt: 2,
