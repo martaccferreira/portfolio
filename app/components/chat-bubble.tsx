@@ -34,7 +34,7 @@ export default function ChatBubble({
     }
   }, [inView, revealedCount, messages.length]);
 
-  const avatarSize = size === "large" ? 56 : 42;
+  const avatarSize = size === "large" ? 86 : 52;
   const messageVariant = size === "large" ? "h5" : "body1";
   const shrinkFactor = size === "large" ? 1 : 0.75;
 
@@ -51,7 +51,7 @@ export default function ChatBubble({
       }}
     >
       <Avatar
-        src={"avatarUrl"}
+        src={`/assets/sprites/${characterName}.jpg`}
         alt={characterName}
         sx={{ width: avatarSize, height: avatarSize }}
       />
