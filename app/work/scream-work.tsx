@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { ProjectCarousel } from "~/components/project-carousel";
+import { projects } from "~/components/projects";
 
 export function ScreamWork() {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.3 });
@@ -132,7 +133,7 @@ export function ScreamWork() {
       >
         So she's a lost cause at running. How about stabbing?
       </Typography>
-      <ProjectCarousel />
+      <ProjectCarousel projects={projects} />
     </Box>
   );
 }

@@ -1,6 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import ChatBubble from "~/components/chat-bubble";
 import { ProjectCarousel } from "~/components/project-carousel";
+import { projects } from "~/components/projects";
 
 export function MeanGirlsWork() {
   return (
@@ -21,7 +22,7 @@ export function MeanGirlsWork() {
           size="normal"
         />
       </Box>
-      <ProjectCarousel />
+      <ProjectCarousel projects={projects} />
     </>
   );
 }

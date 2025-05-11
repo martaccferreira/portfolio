@@ -11,7 +11,6 @@ import type { Route } from "./+types/root";
 import { ThemeWrapper } from "./theme/theme-wrapper";
 import { FloatingButtons } from "./components/floating-buttons";
 
-// TODO: search new typography
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

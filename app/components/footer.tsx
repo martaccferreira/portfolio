@@ -3,7 +3,6 @@ import { useTheme } from "@mui/material/styles";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GithubIcon from "@mui/icons-material/GitHub";
 import { Link } from "react-router";
-import { styled } from "@mui/system";
 
 const items = [
   {

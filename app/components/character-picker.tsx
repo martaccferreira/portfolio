@@ -78,7 +78,7 @@ export function CharacterPicker({ title, cards }: Props) {
           <Card
             key={card.id}
             variant="outlined"
-            sx={{ width: "250px", flexShrink: 0 }}
+            sx={{ width: "246px", flexShrink: 0 }}
           >
             <CardActionArea
               onClick={() => onCardClick(card.id)}
@@ -95,7 +95,7 @@ export function CharacterPicker({ title, cards }: Props) {
             >
               <CardMedia
                 component="img"
-                height="194"
+                height="360"
                 image={card.media}
                 alt={card.description}
               />

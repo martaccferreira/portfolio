@@ -13,7 +13,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { styled } from "@mui/system";
-import { projects } from "./projects";
+import { type Project } from "./projects";
 import { Link } from "react-router";
 
 const ScrollContainer = styled(Box)(({ theme }) => ({
@@ -44,7 +44,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
 }));
 
-export function ProjectCarousel() {
+export function ProjectCarousel({ projects }: { projects: Project[] }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -97,7 +97,7 @@ export function ProjectCarousel() {
                 <CardMedia
                   component="img"
                   alt={project.title}
-                  height="140"
+                  height="218"
                   image={project.imageUrl}
                 />
                 <CardContent>

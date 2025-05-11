@@ -3,7 +3,7 @@ import Paper from "@mui/material/Paper";
 import { Typography, Box } from "@mui/material";
 import MovieIcon from "@mui/icons-material/Movie";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import DrawIcon from "@mui/icons-material/Draw";
+import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -101,13 +101,10 @@ export function AboutGrid() {
 
       {/* 3 */}
       <Item>
-        <DrawIcon />
+        <PublicIcon />
         <Typography>
-          I drew the characters for the{" "}
-          <Box component="span" sx={{ fontStyle: "italic" }}>
-            Choose Your Character
-          </Box>{" "}
-          section myself!
+          I speak English 🇺🇸, Portuguese 🇵🇹, Japanese 🇯🇵 and I'm learning French
+          🇨🇦
         </Typography>
       </Item>
 
