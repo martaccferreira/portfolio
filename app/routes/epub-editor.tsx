@@ -12,27 +12,9 @@ import { ProjectCarousel } from "~/components/project-carousel";
 import { projects } from "~/components/projects";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
+import { TechStack } from "~/components/tech-stack";
 
 const pageName = "epub-editor";
-
-const userFlowData = [
-  {
-    id: "Step 1",
-    text: "Home page form prompting epub upload",
-    img: `/assets/${pageName}/home.png`,
-  },
-  {
-    id: "Step 2",
-    text: "Edit form filled with dropped epub metadata",
-    img: `/assets/${pageName}/flow1.png`,
-  },
-  {
-    id: "Step 3",
-    text: "User edits: drops cover",
-    img: `/assets/${pageName}/flow2.png`,
-  },
-  { id: "Step 4", text: "Download page", img: `/assets/${pageName}/flow3.png` },
-];
 
 export default function EpubEditor() {
   return (
@@ -60,14 +42,14 @@ export default function EpubEditor() {
       <Box
         component="img"
         sx={{ width: "100%", boxShadow: 5, borderRadius: 3 }}
-        alt="The house from the offer."
+        alt="Mini Epub Editor Homepage"
         src={`/assets/${pageName}/home.png`}
       />
       <Box sx={{ padding: 6 }} aria-hidden="true" />
       <ChatBubble
         align="right"
         messages={[
-          "mini because it offers minimal functionalities in a minimalistic UI 😎",
+          "Mini because it offers minimal functionalities in a minimalistic UI 😎",
         ]}
       />
 
@@ -112,16 +94,8 @@ export default function EpubEditor() {
       <Box sx={{ padding: 16 }} aria-hidden="true" />
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ px: 4 }}>
-          <Typography variant="h4">Web Stack</Typography>
-          {["Remix", "Typescript", "Intent UI"].map((item) => (
-            <Chip
-              key={item}
-              label={item}
-              color="primary"
-              variant="outlined"
-              sx={{ m: 2, fontWeight: 500, fontSize: "1rem" }}
-            />
-          ))}
+          <Typography variant="h4">Tech Stack</Typography>
+          <TechStack stack={["Remix", "Typescript", "Intent UI"]} />
           <Typography variant="body1">
             Remix was the obvious choice—it allowed me to build a small-scale
             app while using its robust server-side capabilities to handle EPUB
@@ -135,7 +109,7 @@ export default function EpubEditor() {
             align="right"
             size="normal"
             messages={[
-              "an interesting side effect of this endeavor, was becoming familiar with epub formatting standards",
+              "An interesting side effect of this endeavor, was becoming familiar with epub formatting standards.",
             ]}
           />
           <Typography variant="body1">
@@ -176,8 +150,8 @@ export default function EpubEditor() {
             align="left"
             size="normal"
             messages={[
-              "but in retrospect, it might've been better to use url segments; even if it meant exposing the file ID in the url",
-              "cleaner code and less complexity",
+              "But in retrospect, it might've been better to use url segments; even if it meant exposing the file ID in the url.",
+              "Cleaner code and less complexity.",
             ]}
           />
         </Box>
@@ -229,3 +203,22 @@ export default function EpubEditor() {
     </Container>
   );
 }
+
+const userFlowData = [
+  {
+    id: "Step 1",
+    text: "Home page form prompting epub upload",
+    img: `/assets/${pageName}/home.png`,
+  },
+  {
+    id: "Step 2",
+    text: "Edit form filled with dropped epub metadata",
+    img: `/assets/${pageName}/flow1.png`,
+  },
+  {
+    id: "Step 3",
+    text: "User edits: drops cover",
+    img: `/assets/${pageName}/flow2.png`,
+  },
+  { id: "Step 4", text: "Download page", img: `/assets/${pageName}/flow3.png` },
+];
