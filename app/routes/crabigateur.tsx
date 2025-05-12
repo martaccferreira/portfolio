@@ -22,6 +22,7 @@ import {
 import { TechStack } from "~/components/tech-stack";
 import { ProjectCarousel } from "~/components/project-carousel";
 import { projects } from "~/components/projects";
+import { crabigateurImages } from "assets/crabigateur";
 
 const pageName = "crabigateur";
 
@@ -72,7 +73,7 @@ export default function Crabigateur() {
           component="img"
           sx={{ width: "100%", boxShadow: 5, borderRadius: 3 }}
           alt="Crabigateur showcase page"
-          src={`/assets/${pageName}/showcase.png`}
+          src={crabigateurImages.Showcase}
         />
         <Box sx={{ padding: 6 }} aria-hidden="true" />
         <ChatBubble
@@ -270,21 +271,21 @@ const ThemedTooltip = styled(({ className, ...props }: TooltipProps) => (
 }));
 
 const itemData = [
-  { img: `/assets/${pageName}/db.png`, title: "Database ER Diagram" },
+  { img: crabigateurImages.DB, title: "Database ER Diagram" },
   {
-    img: `/assets/${pageName}/homescreen.png`,
+    img: crabigateurImages.Homescreen,
     title: "MVP Home Screen; no stats yet :( ",
   },
   {
-    img: `/assets/${pageName}/verb.png`,
+    img: crabigateurImages.Verb,
     title: "Lesson Page, current lesson items listed above",
   },
   {
-    img: `/assets/${pageName}/settings.png`,
+    img: crabigateurImages.Settings,
     title: "Review settings with drag and drop sortable options.",
   },
   {
-    img: `/assets/${pageName}/review.png`,
+    img: crabigateurImages.Review,
     title: "Review Page: answer in French!",
   },
 ];

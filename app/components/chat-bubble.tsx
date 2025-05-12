@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "~/theme/theme-wrapper";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { characterSprites } from "assets/sprites";
 
 interface ChatBubbleProps {
   messages: string[];
@@ -18,6 +19,8 @@ export default function ChatBubble({
   animate = false,
 }: ChatBubbleProps) {
   const { characterName } = useContext(ThemeContext);
+  const avatarSrc = characterSprites[characterName];
+
   const isLeft = align === "left";
 
   const { ref, inView } = useInView({
@@ -54,7 +57,7 @@ export default function ChatBubble({
       }}
     >
       <Avatar
-        src={`/assets/sprites/${characterName}.jpg`}
+        src={avatarSrc}
         alt={characterName}
         sx={{ width: avatarSize, height: avatarSize }}
       />

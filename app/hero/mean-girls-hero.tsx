@@ -1,8 +1,8 @@
 import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
-import DevBook from "../../assets/mean-girls/mean-girls-hero.png";
-import DevBookTop from "../../assets/mean-girls/hero-detail-top.png";
-import DevBookBottom from "../../assets/mean-girls/hero-detail-bottom.png";
-import DevBookRight from "../../assets/mean-girls/hero-detail-right.png";
+import DevBook from "assets/mean-girls/mean-girls-hero.png";
+import DevBookTop from "assets/mean-girls/hero-detail-top.png";
+import DevBookBottom from "assets/mean-girls/hero-detail-bottom.png";
+import DevBookRight from "assets/mean-girls/hero-detail-right.png";
 
 export function MeanGirlsHero() {
   const theme = useTheme();

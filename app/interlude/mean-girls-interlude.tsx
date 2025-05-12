@@ -1,5 +1,5 @@
 import ScrollSyncedVideo from "~/components/scroll-synced-video";
-import MGVideo from "../../assets/mean-girls/mean-girls-vid.mp4";
+import MGVideo from "assets/mean-girls/mean-girls-vid.mp4";
 import { Box, Typography } from "@mui/material";
 
 export function MeanGirlsInterlude() {

@@ -13,6 +13,7 @@ import { projects } from "~/components/projects";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { TechStack } from "~/components/tech-stack";
+import { epubEditorImages } from "assets/epub-editor";
 
 const pageName = "epub-editor";
 
@@ -44,7 +45,7 @@ export default function EpubEditor() {
           component="img"
           sx={{ width: "100%", boxShadow: 5, borderRadius: 3 }}
           alt="Mini Epub Editor Homepage"
-          src={`/assets/${pageName}/home.png`}
+          src={epubEditorImages.Home}
         />
         <Box sx={{ padding: 6 }} aria-hidden="true" />
         <ChatBubble
@@ -211,17 +212,17 @@ const userFlowData = [
   {
     id: "Step 1",
     text: "Home page form prompting epub upload",
-    img: `/assets/${pageName}/home.png`,
+    img: epubEditorImages.Home,
   },
   {
     id: "Step 2",
     text: "Edit form filled with dropped epub metadata",
-    img: `/assets/${pageName}/flow1.png`,
+    img: epubEditorImages.Flow1,
   },
   {
     id: "Step 3",
     text: "User edits: drops cover",
-    img: `/assets/${pageName}/flow2.png`,
+    img: epubEditorImages.Flow2,
   },
-  { id: "Step 4", text: "Download page", img: `/assets/${pageName}/flow3.png` },
+  { id: "Step 4", text: "Download page", img: epubEditorImages.Flow3 },
 ];

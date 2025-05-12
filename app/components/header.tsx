@@ -2,6 +2,9 @@ import { Box, Typography, Container } from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router";
 import { ThemeContext } from "~/theme/theme-wrapper";
+import ScreamLogo from "assets/scream/logo.svg";
+import MeanGirlsLogo from "assets/mean-girls/logo.svg";
+import { ThemeNames } from "~/theme/types";
 
 const links = [
   { label: "home", href: "/" },
@@ -12,6 +15,7 @@ const links = [
 
 export function Header({ currentPage }: { currentPage: string }) {
   const { themeName } = useContext(ThemeContext);
+  const logo = themeName === ThemeNames.MeanGirls ? MeanGirlsLogo : ScreamLogo;
 
   return (
     <Container>
@@ -22,11 +26,7 @@ export function Header({ currentPage }: { currentPage: string }) {
             textDecoration: "none",
           }}
         >
-          <img
-            src={`/assets/${themeName}/logo.svg`}
-            alt="Marta Codes"
-            height={"40px"}
-          />
+          <img src={logo} alt="Marta Codes" height={"40px"} />
         </Link>
         <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
           {links

@@ -1,5 +1,5 @@
 import ScrollSyncedVideo from "~/components/scroll-synced-video";
-import SVideo from "../../assets/scream/scream-vid.mp4";
+import SVideo from "assets/scream/scream-vid.mp4";
 import { Box, Typography } from "@mui/material";
 import { OverlapTitle } from "~/components/overlap-title";
 

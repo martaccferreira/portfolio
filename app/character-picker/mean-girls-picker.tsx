@@ -1,27 +1,30 @@
 import { Typography, Box } from "@mui/material";
 import { CharacterPicker } from "~/components/character-picker";
 import { MeanGirlsCharacters } from "~/theme/types";
+import Cady from "assets/character-card/cady.png";
+import Regina from "assets/character-card/regina.png";
+import Janis from "assets/character-card/janis.png";
 
 const cards = [
   {
     id: MeanGirlsCharacters.Cady,
     title: "The Transfer Student",
     description: "Cady Heron",
-    media: "/assets/character-card/cady.png",
+    media: Cady,
     emojis: ["🦒", "🌳", "📚"],
   },
   {
     id: MeanGirlsCharacters.Regina,
     title: "The Queen Bee",
     description: "Regina George",
-    media: "/assets/character-card/regina.png",
+    media: Regina,
     emojis: ["👑", "💄", "💋"],
   },
   {
     id: MeanGirlsCharacters.Janis,
     title: "The Outcast",
     description: "Janis Ian",
-    media: "/assets/character-card/janis.png",
+    media: Janis,
     emojis: ["🖤", "🎸", "😈"],
   },
 ];

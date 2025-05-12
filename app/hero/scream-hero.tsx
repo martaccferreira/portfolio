@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
-import ScreamHeroImage from "../../assets/scream/scream-hero.jpg";
+import ScreamHeroImage from "assets/scream/scream-hero.jpg";
 import { OverlapTitle } from "~/components/overlap-title";
 
 export function ScreamHero() {

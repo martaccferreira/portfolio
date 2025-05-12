@@ -17,6 +17,8 @@ import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural
 import { ProjectCarousel } from "~/components/project-carousel";
 import { projects } from "~/components/projects";
 import { Footer } from "~/components/footer";
+import OLXHomepage from "assets/olx/olx-home.png";
+import MotorsHomepage from "assets/olx/motors-home.png";
 
 const pageName = "olx";
 
@@ -47,13 +49,13 @@ export default function OLXExperience() {
             component="img"
             sx={{ width: "50%", boxShadow: 5, borderRadius: 3 }}
             alt="OLX Poland Homepage"
-            src={`/assets/${pageName}/olx-home.png`}
+            src={OLXHomepage}
           />
           <Box
             component="img"
             sx={{ width: "50%", boxShadow: 5, borderRadius: 3 }}
             alt="Otomoto Homepage"
-            src={`/assets/${pageName}/motors-home.png`}
+            src={MotorsHomepage}
           />
         </Box>
         <Typography
@@ -120,7 +122,8 @@ export default function OLXExperience() {
                 align="right"
                 size="normal"
                 messages={[
-                  "Started out learning the ropes—shadowing my mentor and cramming Golang, React and Git courses on MyAcademy.",
+                  "Started out learning the ropes—shadowing my mentor and cramming Golang, React, and Git courses on MyAcademy.",
+                  "(My bachelor's only covered C, C++, and lower-level programming.)",
                 ]}
               />
             </TimelineContent>

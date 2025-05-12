@@ -1,27 +1,30 @@
 import { Typography, Box } from "@mui/material";
 import { CharacterPicker } from "~/components/character-picker";
 import { ScreamCharacters } from "~/theme/types";
+import Sidney from "assets/character-card/sidney.png";
+import Ghostface from "assets/character-card/ghostface.png";
+import Casey from "assets/character-card/casey.png";
 
 const cards = [
   {
     id: ScreamCharacters.Sidney,
     title: "The (Not So) Goody Two Shoes",
     description: "Sydney Prescott",
-    media: "/assets/character-card/sidney.png",
+    media: Sidney,
     emojis: ["🌂", "👩🏻", "🚨"],
   },
   {
     id: ScreamCharacters.Ghostface,
     title: "The Killer(s)",
     description: "???",
-    media: "/assets/character-card/ghostface.png",
+    media: Ghostface,
     emojis: ["🔪", "👻", "🩸"],
   },
   {
     id: ScreamCharacters.Casey,
     title: "The Blond Airhead(?)",
     description: "Casey Becker",
-    media: "/assets/character-card/casey.png",
+    media: Casey,
     emojis: ["📞", "👱🏻‍♀️", "📺"],
   },
 ];
