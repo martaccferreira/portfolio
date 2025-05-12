@@ -8,9 +8,8 @@ import { MeanGirlsContact, ScreamContact } from "./contact";
 import { Footer } from "./components/footer";
 import { ThemeNames } from "./theme/types";
 import { Container, Box } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import ScrollOverlayGIF from "./components/scroll-overlay-gif";
-import { useRef } from "react";
 
 const FooterContainer: React.FC<{ children: React.ReactNode }> = ({
   children,

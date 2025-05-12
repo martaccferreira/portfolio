@@ -30,7 +30,7 @@ export default function Crabigateur() {
     <Container>
       <Header currentPage={pageName} />
 
-      <Box sx={{ px: 4, py: 6 }}>
+      <Container>
         <Typography variant="h2" sx={{ paddingTop: 12 }}>
           Crabigateur <Chip label="Personal Project" color="primary" />
         </Typography>
@@ -53,8 +53,8 @@ export default function Crabigateur() {
           all. But they all had quirks I didn’t love: vague leveling, no
           typing-based input (just flashcards), or unclear progression. I
           created Crabigateur to fix that—for my current French studies, and
-          potentially any language or topic I want to take on next. (I'd love to
-          use this for{" "}
+          potentially any language or topic I want to take on in the future.
+          (I'd love to use this for{" "}
           <ThemedTooltip
             title="Japanese four-character idioms or phrases. They are used to convey a specific meaning or concept in a concise way. 
             E.g. 七転八起 (shichiten hakki) meaning fall down seven times, stand up eight."
@@ -177,6 +177,8 @@ export default function Crabigateur() {
             "Probably.",
           ]}
         />
+
+        <Box sx={{ padding: 3 }} aria-hidden="true" />
         <Typography variant="h4" sx={{ paddingTop: 16 }}>
           Pain Points
         </Typography>
@@ -217,10 +219,12 @@ export default function Crabigateur() {
             align="left"
             size="normal"
             messages={[
-              "I spent a whole night googling “clean architecture go” and crying softly.",
+              "I spent a whole night googling “clean architecture go” and crying softly, until I finally realized I couldn't research forever and had to implement for it to click.",
             ]}
           />
         </Stack>
+
+        <Box sx={{ padding: 6 }} aria-hidden="true" />
         <Typography variant="h4" sx={{ paddingTop: 16 }} align="center">
           The End?
         </Typography>
@@ -236,7 +240,7 @@ export default function Crabigateur() {
             "It sounds like a pretty good app to extend to mobile as an excuse to try React Native next",
           ]}
         />
-      </Box>
+      </Container>
 
       <Box sx={{ padding: 16 }} aria-hidden="true" />
       <Typography variant="h2" sx={{ fontSize: "2.5rem" }}>
@@ -265,8 +269,20 @@ const ThemedTooltip = styled(({ className, ...props }: TooltipProps) => (
 
 const itemData = [
   { img: `/assets/${pageName}/db.png`, title: "Database ER Diagram" },
-  { img: `/assets/${pageName}/homescreen.png`, title: "Home Screen" },
-  { img: `/assets/${pageName}/verb.png`, title: "Verb Lesson Page" },
-  { img: `/assets/${pageName}/settings.png`, title: "Review Settings" },
-  { img: `/assets/${pageName}/review.png`, title: "Review Page" },
+  {
+    img: `/assets/${pageName}/homescreen.png`,
+    title: "MVP Home Screen; no stats yet :( ",
+  },
+  {
+    img: `/assets/${pageName}/verb.png`,
+    title: "Lesson Page, current lesson items listed above",
+  },
+  {
+    img: `/assets/${pageName}/settings.png`,
+    title: "Review settings with drag and drop sortable options.",
+  },
+  {
+    img: `/assets/${pageName}/review.png`,
+    title: "Review Page: answer in French!",
+  },
 ];
