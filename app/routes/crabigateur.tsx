@@ -78,7 +78,9 @@ export default function Crabigateur() {
         <ChatBubble
           align="right"
           messages={[
-            "I just translated WaniKani into French for the name. Does that incur a copyright issue? 🤔",
+            "I’d love to say the name was a *purposefully* bad translation of WaniKani.",
+            'But the truth is, I didn’t realize "alligateur" 🐊 isn’t actually French until much later—and GPT didn’t bother correcting me, probably because this faux-French makes for a quirky name. 🤦🏻‍♀️',
+            "I guess that’s fair.",
           ]}
         />
         <Typography variant="h4" sx={{ paddingTop: 16 }}>

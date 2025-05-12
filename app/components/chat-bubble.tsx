@@ -76,7 +76,6 @@ export default function ChatBubble({
         {messages.slice(0, revealedCount).map((message, index) => {
           const isLast = index === revealedCount - 1;
           const Container = animate ? motion.div : "div";
-          console.log(animate);
 
           return (
             <Container
