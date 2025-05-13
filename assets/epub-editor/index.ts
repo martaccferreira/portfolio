@@ -1,7 +1,7 @@
-import Home from "./home.png";
-import Flow1 from "./flow1.png";
-import Flow2 from "./flow2.png";
-import Flow3 from "./flow3.png";
+import Home from "./home.jpg";
+import Flow1 from "./flow1.jpg";
+import Flow2 from "./flow2.jpg";
+import Flow3 from "./flow3.jpg";
 
 export const epubEditorImages: Record<string, string> = {
   Home,

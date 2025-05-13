@@ -1,26 +1,20 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Chip,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-} from "@mui/material";
+import Container from "@mui/material/Container";
+import ImageList from "@mui/material/ImageList";
+import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import Box from "@mui/material/Box";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ChatBubble from "~/components/chat-bubble";
-import { ProjectCarousel } from "~/components/project-carousel";
-import { projects } from "~/components/projects";
-import { Footer } from "~/components/footer";
-import { Header } from "~/components/header";
 import { TechStack } from "~/components/tech-stack";
 import { epubEditorImages } from "assets/epub-editor";
+import { ProjectPageLayout } from "~/components/project-page-layout";
 
 const pageName = "epub-editor";
 
 export default function EpubEditor() {
   return (
-    <Container>
-      <Header currentPage={pageName} />
+    <ProjectPageLayout pageName={pageName}>
       <Container>
         <Typography variant="h2" sx={{ paddingTop: 12 }}>
           Mini Epub Editor <Chip label="Personal Project" color="primary" />
@@ -43,6 +37,7 @@ export default function EpubEditor() {
         <Box sx={{ padding: 4 }} aria-hidden="true" />
         <Box
           component="img"
+          loading="lazy"
           sx={{ width: "100%", boxShadow: 5, borderRadius: 3 }}
           alt="Mini Epub Editor Homepage"
           src={epubEditorImages.Home}
@@ -83,6 +78,7 @@ export default function EpubEditor() {
                 src={`${item.img}`}
                 alt={item.id}
                 sx={{ width: "100%", boxShadow: 5, borderRadius: 2 }}
+                loading="lazy"
               />
               <ImageListItemBar
                 title={item.id}
@@ -195,16 +191,7 @@ export default function EpubEditor() {
           ]}
         />
       </Box>
-
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
-      <Typography variant="h2" sx={{ fontSize: "2.5rem" }}>
-        Check out other Projects
-      </Typography>
-      <ProjectCarousel
-        projects={projects.filter((project) => project.id !== pageName)}
-      />
-      <Footer />
-    </Container>
+    </ProjectPageLayout>
   );
 }
 

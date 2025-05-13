@@ -1,6 +1,6 @@
-import EpubCover from "assets/epub-editor/cover.png";
-import CrabigateurApiCover from "assets/crabigateur/api-cover.png";
-import CrabigateurWebCover from "assets/crabigateur/web-cover.png";
+import EpubCover from "assets/epub-editor/cover.jpg";
+import CrabigateurApiCover from "assets/crabigateur/api-cover.jpg";
+import CrabigateurWebCover from "assets/crabigateur/web-cover.jpg";
 import OlxCover from "assets/olx/cover.jpg";
 
 export type Project = {

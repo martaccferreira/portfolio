@@ -1,6 +1,9 @@
-import { useEffect, useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
 import type { PropsWithChildren } from "react";
-import { Box, LinearProgress, IconButton, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import LinearProgress from "@mui/material/LinearProgress";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
 import PauseIcon from "@mui/icons-material/Pause";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 

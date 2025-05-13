@@ -1,5 +1,8 @@
-import { Box, Button, Snackbar, TextField } from "@mui/material";
-import { styled } from "@mui/system";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import TextField from "@mui/material/TextField";
+import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({

@@ -1,4 +1,7 @@
-import { Box, Avatar, Paper, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "~/theme/theme-wrapper";
 import { motion } from "framer-motion";

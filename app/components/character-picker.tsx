@@ -95,6 +95,7 @@ export function CharacterPicker({ title, cards }: Props) {
             >
               <CardMedia
                 component="img"
+                loading="lazy"
                 height="360"
                 image={card.media}
                 alt={card.description}

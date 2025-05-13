@@ -1,36 +1,27 @@
-import {
-  Container,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  Typography,
-  Box,
-  Grid,
-  Chip,
-  Stack,
-} from "@mui/material";
-import { Footer } from "~/components/footer";
-import { Header } from "~/components/header";
 import ChatBubble from "~/components/chat-bubble";
-
-import {
-  styled,
-  Tooltip,
+import { TechStack } from "~/components/tech-stack";
+import { crabigateurImages } from "assets/crabigateur";
+import Container from "@mui/material/Container";
+import ImageList from "@mui/material/ImageList";
+import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Tooltip, {
   tooltipClasses,
   type TooltipProps,
-} from "@mui/material";
-import { TechStack } from "~/components/tech-stack";
-import { ProjectCarousel } from "~/components/project-carousel";
-import { projects } from "~/components/projects";
-import { crabigateurImages } from "assets/crabigateur";
+} from "@mui/material/Tooltip";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { styled } from "@mui/material/styles";
+import { ProjectPageLayout } from "~/components/project-page-layout";
 
 const pageName = "crabigateur";
 
 export default function Crabigateur() {
   return (
-    <Container>
-      <Header currentPage={pageName} />
-
+    <ProjectPageLayout pageName={pageName}>
       <Container>
         <Typography variant="h2" sx={{ paddingTop: 12 }}>
           Crabigateur <Chip label="Personal Project" color="primary" />
@@ -74,6 +65,7 @@ export default function Crabigateur() {
           sx={{ width: "100%", boxShadow: 5, borderRadius: 3 }}
           alt="Crabigateur showcase page"
           src={crabigateurImages.Showcase}
+          loading="lazy"
         />
         <Box sx={{ padding: 6 }} aria-hidden="true" />
         <ChatBubble
@@ -128,6 +120,7 @@ export default function Crabigateur() {
             {itemData.map((item) => (
               <ImageListItem key={item.img}>
                 <img
+                  loading="lazy"
                   srcSet={`${item.img}`}
                   src={`${item.img}`}
                   alt={item.title}
@@ -244,17 +237,7 @@ export default function Crabigateur() {
           ]}
         />
       </Container>
-
-      <Box sx={{ padding: 16 }} aria-hidden="true" />
-      <Typography variant="h2" sx={{ fontSize: "2.5rem" }}>
-        Check out other Projects
-      </Typography>
-      <ProjectCarousel
-        projects={projects.filter((project) => project.id !== pageName)}
-      />
-
-      <Footer />
-    </Container>
+    </ProjectPageLayout>
   );
 }
 

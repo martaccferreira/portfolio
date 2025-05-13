@@ -1,31 +1,27 @@
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineOppositeContent,
-} from "@mui/lab";
-import { Box, Typography, Chip } from "@mui/material";
-import { Container } from "@mui/system";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineContent from "@mui/lab/TimelineContent";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 import ChatBubble from "~/components/chat-bubble";
-import { Header } from "~/components/header";
 import { TechStack } from "~/components/tech-stack";
 import FaceIcon from "@mui/icons-material/Face";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
-import { ProjectCarousel } from "~/components/project-carousel";
-import { projects } from "~/components/projects";
-import { Footer } from "~/components/footer";
-import OLXHomepage from "assets/olx/olx-home.png";
-import MotorsHomepage from "assets/olx/motors-home.png";
+import OLXHomepage from "assets/olx/olx-home.jpg";
+import MotorsHomepage from "assets/olx/motors-home.jpg";
+import Chip from "@mui/material/Chip";
+import { ProjectPageLayout } from "~/components/project-page-layout";
 
 const pageName = "olx";
 
 export default function OLXExperience() {
   return (
-    <Container>
-      <Header currentPage={pageName} />
+    <ProjectPageLayout pageName={pageName}>
       <Container>
         <Typography variant="h2" sx={{ paddingTop: 12 }}>
           OLX Group <Chip label="Professional XP" color="primary" />
@@ -47,12 +43,14 @@ export default function OLXExperience() {
         <Box sx={{ display: "flex", gap: 2, flexDirection: "row", mb: 2 }}>
           <Box
             component="img"
+            loading="lazy"
             sx={{ width: "50%", boxShadow: 5, borderRadius: 3 }}
             alt="OLX Poland Homepage"
             src={OLXHomepage}
           />
           <Box
             component="img"
+            loading="lazy"
             sx={{ width: "50%", boxShadow: 5, borderRadius: 3 }}
             alt="Otomoto Homepage"
             src={MotorsHomepage}
@@ -330,15 +328,6 @@ export default function OLXExperience() {
           </TimelineItem>
         </Timeline>
       </Container>
-      <Box sx={{ padding: 8 }} aria-hidden="true" />
-      <Typography variant="h2" sx={{ fontSize: "2.5rem" }}>
-        Check out other Projects
-      </Typography>
-      <ProjectCarousel
-        projects={projects.filter((project) => project.id !== pageName)}
-      />
-
-      <Footer />
-    </Container>
+    </ProjectPageLayout>
   );
 }

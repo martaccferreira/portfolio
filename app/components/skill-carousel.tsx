@@ -1,5 +1,6 @@
-import { Box, Chip } from "@mui/material";
-import { keyframes } from "@mui/system";
+import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import { keyframes } from "@mui/material/styles";
 
 // Keyframe animations
 const slideLeft = keyframes`

@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import {
-  IconButton,
-  Box,
-  Tooltip,
-  styled,
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import Tooltip, {
   tooltipClasses,
   type TooltipProps,
-} from "@mui/material";
+} from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
 import Badge, { badgeClasses } from "@mui/material/Badge";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ThemeSwitcher } from "./theme-switcher";
@@ -38,7 +37,11 @@ const defaultGithubLink = [
   },
 ];
 
-export function FloatingButtons() {
+export function FloatingButtons({
+  includeThemeSwitcher = false,
+}: {
+  includeThemeSwitcher?: boolean;
+}) {
   const location = useLocation();
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -68,7 +71,7 @@ export function FloatingButtons() {
         mt: 3,
       }}
     >
-      <ThemeSwitcher />
+      {includeThemeSwitcher && <ThemeSwitcher />}
       <StyledTooltip
         title="Check out this project's code here!"
         open={showTooltip}
@@ -76,7 +79,7 @@ export function FloatingButtons() {
         arrow
         placement="left"
       >
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2, p: 2 }}>
           {githubUrls.map((url) => (
             <IconButton
               key={url.label}

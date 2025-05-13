@@ -1,18 +1,16 @@
-import {
-  Box,
-  Card,
-  Chip,
-  CardContent,
-  CardMedia,
-  Typography,
-  Button,
-  IconButton,
-  CardActions,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Chip from "@mui/material/Chip";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import CardActions from "@mui/material/CardActions";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import { type Project } from "./projects";
 import { Link } from "react-router";
 
@@ -96,6 +94,7 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
               <StyledLink to={project.route}>
                 <CardMedia
                   component="img"
+                  loading="lazy"
                   alt={project.title}
                   height="218"
                   image={project.imageUrl}

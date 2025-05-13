@@ -1,10 +1,10 @@
-import {
-  Tooltip,
-  IconButton,
-  styled,
+import IconButton from "@mui/material/IconButton";
+import Tooltip, {
   type TooltipProps,
   tooltipClasses,
-} from "@mui/material";
+} from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
+
 import { ThemeNames } from "~/theme/types";
 import { MeanGirlsIcon } from "./mean-girls-icon";
 import { ScreamIcon } from "./scream-icon";
@@ -26,12 +26,7 @@ export function ThemeSwitcher() {
       <LightTooltip title="Mean Girls" placement="left">
         <IconButton
           onClick={() => setThemeName(ThemeNames.MeanGirls)}
-          sx={{
-            boxShadow:
-              themeName === ThemeNames.MeanGirls ? "0px 0px 8px #fff" : "none",
-            borderRadius: 2,
-            padding: 0,
-          }}
+          sx={{ borderRadius: 2, padding: 0 }}
         >
           <MeanGirlsIcon isSelected={themeName === ThemeNames.MeanGirls} />
         </IconButton>
@@ -40,12 +35,7 @@ export function ThemeSwitcher() {
       <LightTooltip title="Scream (1996)" placement="left">
         <IconButton
           onClick={() => setThemeName(ThemeNames.Scream)}
-          sx={{
-            boxShadow:
-              themeName === ThemeNames.MeanGirls ? "0px 0px 8px #fff" : "none",
-            borderRadius: 2,
-            padding: 0,
-          }}
+          sx={{ borderRadius: 2, padding: 0 }}
         >
           <ScreamIcon isSelected={themeName === ThemeNames.Scream} />
         </IconButton>

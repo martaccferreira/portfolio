@@ -1,6 +1,7 @@
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import { Typography, Box } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import MovieIcon from "@mui/icons-material/Movie";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import PublicIcon from "@mui/icons-material/Public";

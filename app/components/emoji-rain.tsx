@@ -1,4 +1,5 @@
-import { Box, keyframes } from "@mui/material";
+import Box from "@mui/material/Box";
+import { keyframes } from "@mui/material/styles";
 
 type EmojiRainItem = {
   id: number;

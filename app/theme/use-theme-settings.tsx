@@ -1,34 +1,29 @@
-import { useState, useEffect } from "react";
-import { defaultThemeSettings, ThemeNames } from "./types";
-
-interface ThemeSettings {
-  themeName: ThemeNames;
-  characters: Record<ThemeNames, string>;
-}
+import { useEffect, useState } from "react";
+import { defaultThemeSettings, type ThemeSettings } from "./types";
 
 export function usePersistentThemeSettings() {
-  const [settings, setSettings] = useState<ThemeSettings | null>(null);
+  const [settings, setSettings] = useState<ThemeSettings>(defaultThemeSettings);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const stored = localStorage.getItem("themeSettings");
+    const stored = localStorage.getItem("theme-settings");
     if (stored) {
       try {
-        const parsed = JSON.parse(stored) as ThemeSettings;
-        setSettings(parsed);
-      } catch (err) {
-        console.error("Failed to parse theme settings from localStorage:", err);
+        setSettings(JSON.parse(stored));
+      } catch {
         setSettings(defaultThemeSettings);
       }
-    } else {
-      setSettings(defaultThemeSettings);
     }
+    setLoading(false);
   }, []);
 
-  useEffect(() => {
-    if (settings) {
-      localStorage.setItem("themeSettings", JSON.stringify(settings));
-    }
-  }, [settings]);
+  const updateSettings = (updater: (prev: ThemeSettings) => ThemeSettings) => {
+    setSettings((prev) => {
+      const updated = updater(prev);
+      localStorage.setItem("theme-settings", JSON.stringify(updated));
+      return updated;
+    });
+  };
 
-  return [settings, setSettings] as const;
+  return [settings, updateSettings, loading] as const;
 }
