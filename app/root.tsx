@@ -43,7 +43,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ThemeWrapper>
-          <CharacterWrapper>{children}</CharacterWrapper>
+          <CharacterWrapper>
+            {children}
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              hidden
+            >
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <textarea name="message" />
+            </form>
+          </CharacterWrapper>
         </ThemeWrapper>
         <ScrollRestoration />
         <Scripts />
