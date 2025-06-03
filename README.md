@@ -1,18 +1,54 @@
-# Welcome to React Router!
+# Personal Website
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A personalized, themed portfolio website built with modern React tools. This site is a creative space to showcase my work, highlight projects, and experiment with design, animation, and customization.
 
-## Features
+## 🛠 Tech Stack
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **React** – Frontend framework
+- **React Router v7** – Routing for a multi-page experience
+- **Material UI (MUI)** – UI component library
+- **Emotion** – CSS-in-JS for custom styled components
+- **Framer Motion** – For smooth, performant animations
+- **Netlify** – Hosting and deployment
 
-## Getting Started
+## ✨ Features
+
+- 🎭 **Two Unique Themes**:
+  - **Mean Girls Theme** – Light mode with glam and sass
+  - **Scream Theme** – Dark mode with horror vibes
+- 🏠 **Animated Home Page** – Built with Framer Motion
+- 👤 **Character Personalization** – Selectable characters to tailor the UI experience
+- 📖 **Project Process Pages** – Deep dives into my workflows and technical decisions
+- 🧩 Modular structure for easy expansion and updates
+
+## 📁 Project Structure
+
+```
+.
+├── public/
+│ └── netlify-form-dummy.html # Hidden static form for Netlify bot detection
+│
+├── app/
+│ ├── components/ # Reusable React components
+│ ├── home/ # Home page components
+│ ├── routes/ # Main pages
+│ ├── theme/ # Theme wrappers and logic
+│ ├── root.tsx # Main app entry
+│ └── routes.ts # Routes config
+│
+├── README.md
+│
+├── package.json
+│
+└── ...
+```
+
+## 🚧 Work in Progress
+
+- 📱 **Mobile Responsiveness** – Currently optimizing layouts and interactivity for smaller screens
+- ♿ **Accessibility** – Improvements in keyboard navigation, contrast, and ARIA support
+
+## 🚀 Getting Started
 
 ### Installation
 
@@ -30,8 +66,6 @@ Start the development server with HMR:
 npm run dev
 ```
 
-Your application will be available at `http://localhost:3000`.
-
 ## Building for Production
 
 Create a production build:
@@ -40,14 +74,12 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## 🌐 Live Site
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/remix-run/react-router-templates&create_from_path=netlify)
+Check out the deployed site here:
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+[![Live Website](./home-screen.png)](https://martaccferreira.dev)
 
 ---
 
-Built with ❤️ using React Router.
+Feel free to explore, test the themes, and view my featured projects! 🤲🏻
