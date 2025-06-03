@@ -26,6 +26,14 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
       borderColor: "primary.main",
     },
   },
+  "& input:-webkit-autofill": {
+    boxShadow: `0 0 0 1000px ${theme.palette.background.paper} inset`,
+    WebkitTextFillColor: theme.palette.text.primary,
+    transition: "background-color 5000s ease-in-out 0s",
+  },
+  "& .MuiInputBase-root": {
+    backgroundColor: theme.palette.background.paper,
+  },
 }));
 
 export function ContactForm() {
