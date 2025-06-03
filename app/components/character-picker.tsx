@@ -5,9 +5,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import { ThemeContext } from "~/theme/theme-wrapper";
 import { EmojiRain } from "./emoji-rain";
 import type { ThemeCharacter } from "~/theme/types";
+import { CharacterContext } from "~/theme/character-wrapper";
 
 type Props = {
   title: React.ReactElement;
@@ -30,7 +30,7 @@ interface EmojiRainItem {
 }
 
 export function CharacterPicker({ title, cards }: Props) {
-  const { characterName, setCharacterName } = useContext(ThemeContext);
+  const { characterName, setCharacterName } = useContext(CharacterContext);
   const [selectedCard, setSelectedCard] = useState(characterName);
   const [emojiRain, setEmojiRain] = useState<EmojiRainItem[]>([]);
 

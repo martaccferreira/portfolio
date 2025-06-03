@@ -16,7 +16,7 @@ export default function ScreamAbout() {
         align="left"
         animate
       />
-      <Box sx={{ padding: 21 }} aria-hidden="true" />
+      <Box sx={{ padding: 14 }} aria-hidden="true" />
       <Typography
         variant="h1"
         color="primary.main"
@@ -29,14 +29,13 @@ export default function ScreamAbout() {
         variant="h6"
         color="primary.main"
         align="center"
-        sx={{ fontStyle: "italic" }}
+        sx={{ fontStyle: "italic", mb: 4 }}
       >
         a collection of things she has said
       </Typography>
-      <Box sx={{ padding: 2 }} aria-hidden="true" />
       <AboutGrid />
       <SkillCarousels />
-      <Box sx={{ padding: 21 }} aria-hidden="true" />
+      <Box sx={{ padding: 14 }} aria-hidden="true" />
       <ChatBubble
         messages={[
           "Hm.",

@@ -128,7 +128,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               1st Project: Creating a Post-Paid System for Car Parts Sellers
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -148,7 +148,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               In a pinch!! : Early Challenges
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -169,7 +169,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               1st Project Continuation and Independent Growth
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -220,7 +220,7 @@ export default function OLXExperience() {
           {/* Projects as sub-dots under FE */}
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               A New Era: Focus on Experiment Features
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -249,7 +249,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               2nd Big Project: Export from OLX to Otomoto
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -280,7 +280,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               On the Side: Internal Tools
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -302,7 +302,7 @@ export default function OLXExperience() {
           </TimelineItem>
 
           <TimelineItem>
-            <TimelineOppositeContent color="secondary" sx={{ fontWeight: 600 }}>
+            <TimelineOppositeContent color="primary" sx={{ fontWeight: 600 }}>
               Code Hygiene & Support
             </TimelineOppositeContent>
             <TimelineSeparator>

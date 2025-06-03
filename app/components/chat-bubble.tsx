@@ -3,10 +3,10 @@ import Avatar from "@mui/material/Avatar";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "~/theme/theme-wrapper";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { characterSprites } from "assets/sprites";
+import { CharacterContext } from "~/theme/character-wrapper";
 
 interface ChatBubbleProps {
   messages: string[];
@@ -21,7 +21,7 @@ export default function ChatBubble({
   size = "large",
   animate = false,
 }: ChatBubbleProps) {
-  const { characterName } = useContext(ThemeContext);
+  const { characterName } = useContext(CharacterContext);
   const avatarSrc = characterSprites[characterName];
 
   const isLeft = align === "left";
@@ -75,7 +75,11 @@ export default function ChatBubble({
           gap: 1.5 * shrinkFactor,
         }}
       >
-        <Typography variant="body2" color="secondary.main">
+        <Typography
+          variant="body1"
+          color="secondary.main"
+          sx={{ fontWeight: 800 }}
+        >
           {characterName}
         </Typography>
 

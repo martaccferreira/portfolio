@@ -19,13 +19,11 @@ const ScrollContainer = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(2),
   marginBottom: theme.spacing(2),
   overflowX: "scroll",
+  overflowY: "hidden",
   scrollBehavior: "smooth",
 
-  scrollbarWidth: "thin",
-  scrollbarColor: `${theme.palette.primary.main} transparent`,
-
   "&::-webkit-scrollbar": {
-    height: "8px",
+    height: "6px",
   },
   "&::-webkit-scrollbar-thumb": {
     backgroundColor: theme.palette.primary.main,
@@ -73,7 +71,7 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseUp}
       onMouseUp={onMouseUp}
-      sx={{ mb: 32 }}
+      sx={{ mb: 18 }}
     >
       <ScrollContainer ref={containerRef}>
         {projects.map((project, index) => (

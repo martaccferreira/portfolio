@@ -63,11 +63,11 @@ export const meanGirlsThemeOptions: ThemeOptions = {
       paper: "#fd51af",
     },
     primary: {
-      main: "#ffb2dc",
+      main: "#000",
       contrastText: "#fff0f6",
     },
     secondary: {
-      main: "#9B59B6",
+      main: "#FF1486",
       contrastText: "#fff",
     },
     error: {
@@ -86,7 +86,7 @@ export const meanGirlsThemeOptions: ThemeOptions = {
   typography: {
     fontFamily: "League Spartan, sans-serif",
     allVariants: {
-      color: "#fff0f6",
+      color: "#fff",
     },
     h1: {
       fontWeight: 400,

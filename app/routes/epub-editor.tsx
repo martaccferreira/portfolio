@@ -9,8 +9,39 @@ import ChatBubble from "~/components/chat-bubble";
 import { TechStack } from "~/components/tech-stack";
 import { epubEditorImages } from "assets/epub-editor";
 import { ProjectPageLayout } from "~/components/project-page-layout";
+import { styled } from "@mui/material/styles";
 
 const pageName = "epub-editor";
+
+const ScrollImageList = styled(ImageList)(({ theme }) => ({
+  paddingBottom: theme.spacing(2),
+  marginBottom: theme.spacing(2),
+  width: "100%",
+  height: 450,
+  overflowY: "scroll",
+  overflowX: "hidden",
+
+  // Force scrollbar to always be visible (Webkit - Chrome, Safari, including macOS overlay)
+  "&::-webkit-scrollbar": {
+    display: "block !important", // Force display
+    width: "6px !important", // Adjust width as needed
+    backgroundColor: "transparent !important", // Optional: Background for the track
+    visibility: "visible !important", // Force visibility
+  },
+  "&::-webkit-scrollbar-thumb": {
+    backgroundColor: `${theme.palette.primary.main} !important`, // Adjust color as needed
+    borderRadius: 4,
+    visibility: "visible !important", // Force visibility
+  },
+  "&::-webkit-scrollbar-track": {
+    backgroundColor: "transparent !important", // Ensure track is visible
+    visibility: "visible !important", // Force visibility
+  },
+
+  // Ensure content doesn't overlap
+  paddingRight: theme.spacing(1),
+  boxSizing: "border-box",
+}));
 
 export default function EpubEditor() {
   return (
@@ -67,10 +98,10 @@ export default function EpubEditor() {
           3. The app injects the updated data back into the EPUB, and the edited
           file is served for download.
         </Typography>
-        <Typography variant="h6" color="secondary.main">
+        <Typography variant="h6" color="primary">
           Which resulted in the logical, straightforward, user flow:
         </Typography>
-        <ImageList sx={{ width: "100%", height: 450 }}>
+        <ScrollImageList>
           {userFlowData.map((item) => (
             <ImageListItem key={item.id}>
               <Box
@@ -87,7 +118,7 @@ export default function EpubEditor() {
               />
             </ImageListItem>
           ))}
-        </ImageList>
+        </ScrollImageList>
 
         <Box sx={{ padding: 16 }} aria-hidden="true" />
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -107,7 +138,7 @@ export default function EpubEditor() {
               align="right"
               size="normal"
               messages={[
-                "An interesting side effect of this endeavor, was becoming familiar with epub formatting standards.",
+                "An interesting side effect of this endeavor was becoming familiar with epub formatting standards.",
               ]}
             />
             <Typography variant="body1">
@@ -181,7 +212,7 @@ export default function EpubEditor() {
           So for now, everything stays local and ephemeral, in line with the
           app’s minimalistic, personal-use focus.
         </Typography>
-        <Typography variant="h6" align="center">
+        <Typography variant="h6" align="center" sx={{ paddingTop: 2 }}>
           But what if?
         </Typography>
         <ChatBubble

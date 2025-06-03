@@ -6,8 +6,7 @@ import Tooltip, {
 import { styled } from "@mui/material/styles";
 
 import { ThemeNames } from "~/theme/types";
-import { MeanGirlsIcon } from "./mean-girls-icon";
-import { ScreamIcon } from "./scream-icon";
+import { ThemeIcon } from "./theme-icon";
 import { ThemeContext } from "~/theme/theme-wrapper";
 import { useContext } from "react";
 
@@ -28,7 +27,10 @@ export function ThemeSwitcher() {
           onClick={() => setThemeName(ThemeNames.MeanGirls)}
           sx={{ borderRadius: 2, padding: 0 }}
         >
-          <MeanGirlsIcon isSelected={themeName === ThemeNames.MeanGirls} />
+          <ThemeIcon
+            isSelected={themeName === ThemeNames.MeanGirls}
+            theme={ThemeNames.MeanGirls}
+          />
         </IconButton>
       </LightTooltip>
 
@@ -37,7 +39,10 @@ export function ThemeSwitcher() {
           onClick={() => setThemeName(ThemeNames.Scream)}
           sx={{ borderRadius: 2, padding: 0 }}
         >
-          <ScreamIcon isSelected={themeName === ThemeNames.Scream} />
+          <ThemeIcon
+            isSelected={themeName === ThemeNames.Scream}
+            theme={ThemeNames.Scream}
+          />
         </IconButton>
       </LightTooltip>
     </>

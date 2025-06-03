@@ -96,7 +96,15 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
         />
-        <Button type="submit" variant="contained">
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            "&:hover": {
+              backgroundColor: "secondary.main",
+            },
+          }}
+        >
           Send Message
         </Button>
       </Box>

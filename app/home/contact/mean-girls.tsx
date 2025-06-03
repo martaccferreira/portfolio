@@ -24,7 +24,10 @@ export default function MeanGirlsContact({
         </Typography>
         <Typography variant="h2" sx={{ fontSize: "7rem" }}>
           But, I don’t know, maybe you're{" "}
-          <Box component="span" sx={{ color: "secondary.main" }}>
+          <Box
+            component="span"
+            sx={{ color: "secondary.main", fontWeight: 600 }}
+          >
             into that?
           </Box>
         </Typography>

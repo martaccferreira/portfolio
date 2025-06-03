@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import { ThemeWrapper } from "./theme/theme-wrapper";
-import { FloatingButtons } from "./components/floating-buttons";
+import { CharacterWrapper } from "./theme/character-wrapper";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,7 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <ThemeWrapper>{children}</ThemeWrapper>
+        <ThemeWrapper>
+          <CharacterWrapper>{children}</CharacterWrapper>
+        </ThemeWrapper>
         <ScrollRestoration />
         <Scripts />
       </body>

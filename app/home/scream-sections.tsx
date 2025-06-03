@@ -67,7 +67,7 @@ export function screamSections(
       id: "interlude-2",
       components: (
         <ScrollOverlayGIF
-          gifSrc="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTYyc3JyOTF4ajhnbDBmemIwZ2h2YW5tN2U2bTd0MnJtcnVjNDdhZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lPP4Crb4efP8s/giphy.gif"
+          gifSrc="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2Y4eXFxMTB6am9ycjBpeGozczlhNDV3bjRqcWg4eWVtdmZ1ZjNkdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/45aI8f1nI1b071X96C/giphy.gif"
           startRef={projectsRef}
           endRef={contactRef}
         />

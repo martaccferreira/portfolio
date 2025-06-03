@@ -26,7 +26,7 @@ export default function ScreamContact({
           variant="h4"
           sx={{ fontWeight: 300, color: "secondary.main" }}
         >
-          Reach out if you want more:
+          Reach out to do some stabbing together:
         </Typography>
         <ContactForm />
       </Box>

@@ -16,7 +16,7 @@ export default function MeanGirlsAbout() {
         align="left"
         animate
       />
-      <Box sx={{ padding: 21 }} aria-hidden="true" />
+      <Box sx={{ padding: 14 }} aria-hidden="true" />
       <Typography
         variant="h1"
         color="primary.main"
@@ -32,14 +32,13 @@ export default function MeanGirlsAbout() {
         variant="h6"
         color="primary.main"
         align="center"
-        sx={{ fontStyle: "italic" }}
+        sx={{ fontStyle: "italic", mb: 4 }}
       >
         quoted by herself, or whatever
       </Typography>
-      <Box sx={{ padding: 2 }} aria-hidden="true" />
       <AboutGrid />
       <SkillCarousels />
-      <Box sx={{ padding: 21 }} aria-hidden="true" />
+      <Box sx={{ padding: 14 }} aria-hidden="true" />
       <ChatBubble
         messages={[
           "Ugh",

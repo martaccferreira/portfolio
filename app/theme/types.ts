@@ -17,20 +17,12 @@ export enum MeanGirlsCharacters {
 
 export type ThemeCharacter = ScreamCharacters | MeanGirlsCharacters;
 
-export type Characters = {
+export type CharacterSettings = {
   [ThemeNames.MeanGirls]: MeanGirlsCharacters;
   [ThemeNames.Scream]: ScreamCharacters;
 };
 
-export type ThemeSettings = {
-  themeName: ThemeNames;
-  characters: Characters;
-};
-
-export const defaultThemeSettings: ThemeSettings = {
-  themeName: ThemeNames.MeanGirls,
-  characters: {
-    [ThemeNames.MeanGirls]: MeanGirlsCharacters.Regina,
-    [ThemeNames.Scream]: ScreamCharacters.Ghostface,
-  },
+export const defaultCharacterSettings = {
+  [ThemeNames.MeanGirls]: MeanGirlsCharacters.Regina,
+  [ThemeNames.Scream]: ScreamCharacters.Ghostface,
 };
