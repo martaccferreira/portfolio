@@ -56,7 +56,7 @@ export function ContactForm() {
 
     const formDataEncoded = new FormData(form);
 
-    await fetch("/", {
+    await fetch("/netlify-form-dummy", {
       method: "POST",
       body: formDataEncoded,
     });
