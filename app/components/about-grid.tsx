@@ -59,7 +59,7 @@ export function AboutGrid() {
           <Box component="span" sx={{ textDecoration: "line-through" }}>
             survivor?
           </Box>{" "}
-          member of the mytical tech industry for{" "}
+          member of the mystical tech industry for{" "}
           <Box component="span" sx={{ color: "primary.main", fontWeight: 800 }}>
             3 years
           </Box>
