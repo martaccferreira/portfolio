@@ -79,24 +79,24 @@ export function AboutGrid() {
         }}
       >
         <Typography>
-          Lover of{" "}
+          Addicted to building{" "}
           <Box
             component="span"
             sx={{ fontSize: "1.2rem", fontFamily: "Bebas Neue" }}
           >
-            ✨aesthetic✨ UIs,
+            ⚡️snappy frontend interfaces⚡️,
           </Box>{" "}
-          memorable user experiences, and{" "}
+          joyful user journeys, and{" "}
           <Box component="span" color="primary.main" sx={{ fontWeight: 800 }}>
-            maintainable, scalable, easy-to-read code!
+            crisp, organized code!
           </Box>{" "}
         </Typography>
         <Typography
           variant="body2"
           sx={{ fontStyle: "italic", fontSize: "0.8rem" }}
         >
-          Feel free to pop into any of my public repos and tell me how I can
-          optimize!
+          Swing by my public repos and drop some ideas to make my code shine
+          (✨) brighter!
         </Typography>
       </Item>
 

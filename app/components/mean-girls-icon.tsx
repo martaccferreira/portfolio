@@ -29,7 +29,7 @@ export const MeanGirlsIcon = ({ isSelected }: Props) => {
     >
       <img
         src={Icon}
-        alt="Scream Theme Icon"
+        alt="Mean Girls Icon"
         height="40px"
         style={{ display: "block" }}
       />
